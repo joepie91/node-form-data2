@@ -1,1 +1,1 @@
-module.exports = require("./lib/form-data2.coffee");
+module.exports = require("./lib/form-data2");
