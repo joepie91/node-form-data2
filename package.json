@@ -1,6 +1,6 @@
 {
   "name": "form-data2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Streams2-compatible drop-in replacement for the `form-data` module.",
   "main": "index.js",
   "scripts": {

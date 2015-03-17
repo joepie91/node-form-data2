@@ -29,6 +29,7 @@ While `form-data2` was designed to be roughly API-compatible with the `form-data
 * `form-data2` does __not__ do HTTP requests. It is purely a multipart/form-data encoder. This means you should use a different module for your HTTP requests, such as [`bhttp`](https://www.npmjs.com/package/bhttp), [`request`](https://www.npmjs.com/package/request), or the core `http` module. `bhttp` uses `form-data2` internally - that means you won't have to manually use `form-data2`.
 * The `header` option for the `form.append()` options object is not (yet) implemented. This means that you cannot currently set custom field headers.
 * There is no `form.getLengthSync()` method. Length retrieval is always asynchronous.
+* The `form.getHeaders` method is __always asynchronous__ (whereas in the original `form-data`, it is synchronous). Due to the requirements for obtaining the stream length reliably, there is no synchronous equivalent.
 * A `form-data2` stream is not a real stream. Only the `form.pipe()` method is implemented, other stream methods are unavailable. This may change in the future.
 
 ## Usage
